@@ -6,11 +6,8 @@ import java.util.Map;
 import com.precagno.product.services.product_services.product.dto.Product;
 
 public class ProductDAOImpl implements ProductDAO {
-	Map<Integer,Product> products;
+	Map<Integer,Product> products=new HashMap<>();
 	
-	public ProductDAOImpl() {
-		this.products=new HashMap<>();
-	}
 	@Override
 	public void create(Product product) {
 		this.products.put(product.getId(),product);
